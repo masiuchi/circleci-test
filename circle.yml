@@ -9,7 +9,7 @@ dependencies:
   override:
     - if [[ -e ~/docker/image.tar ]]; then docker load -i ~/docker/image.tar; fi
     - docker build -t test .
-    - mkdir -p ~/docker; docker save mt > ~/docker/image.tar
+    - mkdir -p ~/docker; docker save test > ~/docker/image.tar
 
 test:
   override:
